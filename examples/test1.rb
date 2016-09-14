@@ -34,6 +34,7 @@ class Receiver
     send("remote_port     => #{remote_port.inspect}")
     send("remote_hostname => #{remote_hostname.inspect}")
     send("remote_ip       => #{remote_ip.inspect}")
+    send("options         => #{@options.inspect}")
     send(" ")
     send("Type 'q' to quit this connection only.")
     send(" ")

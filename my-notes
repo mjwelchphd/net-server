@@ -1,7 +1,8 @@
 # Build and install the gem
 gem build net-server.gemspec
-sudo gem install net-server-1.0.0.gem
+sudo gem install net-server-1.1.0.gem
 
+# uninstall the gem
 sudo gem uninstall net-server
 
 # first time
@@ -11,7 +12,7 @@ git remote add origin https://github.com/mjwelchphd/net-server.git
 git push -u origin master
 
 # push the gem
-gem push net-server-1.0.0
+gem push net-server-1.0.0.gem
 
 
 # another way to create a self-signed certificate

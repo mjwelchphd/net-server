@@ -54,7 +54,7 @@ private
 
         # a new object is created here to provide separation between server and receiver
         # this call receives the email and does basic validation
-        Receiver::new(connection).receive(local_port, Socket::gethostname, remote_port, remote_hostname, remote_ip)
+        Receiver::new(connection, @options).receive(local_port, Socket::gethostname, remote_port, remote_hostname, remote_ip)
       rescue ServerQuit
         # nothing to do here
       end
