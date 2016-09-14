@@ -12,6 +12,7 @@ class Receiver
 
   def initialize(connection)
     @connection = connection
+    @options = options
   end
 
   def send(data)

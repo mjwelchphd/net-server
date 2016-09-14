@@ -9,8 +9,9 @@ require 'logger'
 
 class Receiver
 
-  def initialize(connection)
+  def initialize(connection, options)
     @connection = connection
+    @options = options
   end
 
   def send(data)

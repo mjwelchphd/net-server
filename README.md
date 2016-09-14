@@ -54,8 +54,14 @@ require 'net/server'
 
 class Receiver
 
+  def initialize(connection, options)
+    @connection = connection
+    @options = options
+  end
+
   def receive(local_port, local_hostname, remote_port, remote_hostname, remote_ip)
     <send and receive data>
+    # when this method exits, the process is cleaned up and terminated by Net::Server
   end
 
 end
@@ -79,6 +85,8 @@ There are two test applications included in the gem in the examples folder. Test
   :working_directory | the current path | The location of the program running the server.
   :pid_file | "pid" | The PID of the server will be stored in this file.
   :daemon | false | If this option is true, the server will be started as a daemon.
+
+You can pass Receiver options thru here also because these options are passed to the Receiver during the instantiation of the Receiver object. You can add options that you'll use in your own programming as well. Net::Server only looks for it's own options, so the presence of other options does no harm.
 
 ## Logging
 
