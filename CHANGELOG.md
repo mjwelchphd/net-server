@@ -1,3 +1,6 @@
+# v1.2.0
+Changed the options logic to allow non-server options to be passed through.
+
 # v1.1.0
 Added the server's options to the instantiation of the Receiver class. This allows all options to be passed into the system in one place, namely, the server start line (see the last line in one of the example programs).
 

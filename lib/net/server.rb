@@ -35,9 +35,9 @@ private
         [:private_key, "#{path}server.key"], [:certificate, "#{path}server.crt"], \
         [:user_name, nil], [:group_name, nil], [:working_directory, File::realpath('.')], \
         [:pid_file, "pid"], [:daemon, false]]
-      @options = {}
+      @options = options
       @option_list.each do |key,value|
-        @options[key] = if options.has_key?(key) then options[key] else value end
+        @options[key] = value if !options.has_key?(key)
       end
     end # initialize
 
